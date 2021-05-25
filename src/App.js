@@ -1,12 +1,17 @@
 import './App.css';
-
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Header from './Header';
+import Cat from './Cat';
 
 function App() {
   return (
-    <div className="App">
-     <Header />
+    <Router>
+      <div className="App">
+      <Header />
+      <Link to="/cat">Visit our cat!</Link>
+      <Route path="/cat" component={Cat} />
     </div>
+    </Router>
   );
 }
 
